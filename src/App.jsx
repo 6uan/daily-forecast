@@ -22,12 +22,12 @@ function App() {
   const bgColor = dayColors[dayOfWeek];
 
   return (
-    <div className="w-screen h-screen bg-white flex flex-col justify-center items-center border-4">
-      <header className="border-2 w-3/5 min-w-[600px] p-10 rounded-t-lg bg-white">
+    <div className="flex h-screen w-screen flex-col items-center justify-center border-4 bg-white">
+      <header className="w-3/5 min-w-[600px] rounded-t-lg border-2 bg-white p-10">
         <CurrentDate />
       </header>
 
-      <section className="w-3/5 min-w-[600px] flex flex-row justify-center items-center ">
+      <section className="flex w-3/5 min-w-[600px] flex-row items-center justify-center">
         <Day
           day="Monday"
           start="1:00 PM"

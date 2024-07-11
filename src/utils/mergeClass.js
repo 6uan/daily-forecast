@@ -1,5 +1,5 @@
-import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
 
-const mergeClassNames = (...classes) => twMerge(...classes)
+const mergeClassNames = (...classes) => twMerge(...classes);
 
-export default mergeClassNames
+export default mergeClassNames;

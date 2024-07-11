@@ -2,7 +2,7 @@ import mergeClassNames from "../utils/mergeClass.js";
 
 const Day = ({ day, start, end, bgColor, extra }) => {
   const baseClass =
-    "text-xs hover:bg-gray-800 hover:text-white grid place-content-center text-black h-40 flex-1";
+    "grid h-40 flex-1 place-content-center text-xs text-black hover:bg-gray-800 hover:text-white";
   const mergedClassNames = mergeClassNames(baseClass, bgColor, extra);
   return (
     <div className={mergedClassNames}>
