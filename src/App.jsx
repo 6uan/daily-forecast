@@ -2,6 +2,7 @@ import React from "react";
 import Day from "./components/Day";
 import CurrentDate from "./components/CurrentDate";
 import "./output.css";
+import CurrentWeather from "./components/CurrentWeather";
 
 function App() {
   const now = new Date();
@@ -21,10 +22,14 @@ function App() {
   // Get the background color for the current day
   const bgColor = dayColors[dayOfWeek];
 
+
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center border-4 bg-white">
       <header className="w-3/5 min-w-[600px] rounded-t-lg border-2 bg-white p-10">
-        <CurrentDate />
+        <div className="flex flex-row justify-center border-2 align-middle">
+          <CurrentDate />
+          <CurrentWeather />
+        </div>
       </header>
 
       <section className="flex w-3/5 min-w-[600px] flex-row items-center justify-center">

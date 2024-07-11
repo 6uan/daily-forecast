@@ -18,7 +18,7 @@ const CurrentDate = () => {
   const minDate = date.format(currentTime, minutepattern);
 
   return (
-    <div className="mx-auto flex w-auto flex-col justify-center text-center align-middle text-black">
+    <div className="flex w-auto flex-col justify-center border-2 text-center align-middle text-black">
       <h1 className="mb-[2px] font-black"> TODAY IS </h1>
       <p className="text-2xl font-bold text-green-900">{currDate} </p>
       <p className="text-2xl text-black">{minDate} </p>
