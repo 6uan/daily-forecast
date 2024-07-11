@@ -19,9 +19,9 @@ const CurrentDate = () => {
 
   return (
     <div className="text-black flex flex-col justify-center w-auto align-middle text-center mx-auto">
-      <h1 className="font-black mb-[3px]"> TODAY IS </h1>
-      <p className="font-bold text-2xl text-red-700">{currDate} </p>
-      <p className="text-2xl text-red-700">{minDate} </p>
+      <h1 className="font-black mb-[2px]"> TODAY IS </h1>
+      <p className="font-bold text-2xl text-green-900">{currDate} </p>
+      <p className="text-2xl text-black">{minDate} </p>
     </div>
   );
 };
