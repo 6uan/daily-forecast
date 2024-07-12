@@ -27,52 +27,54 @@ function App() {
   const defaultColor = "bg-white";
 
   return (
-    <div className="flex h-screen w-screen flex-col items-center justify-center">
-      <Background />
-      <header className="w-3/5 min-w-[350px] md:min-w-[600px]">
-        {/* <CurrentDate /> */}
-        {/* <CurrentWeather /> */}
-        <Header />
-      </header>
-      <section className="flex w-3/5 min-w-[350px] flex-row items-center justify-center md:min-w-[600px]">
-        <Day
-          day="Monday"
-          start="1:00 PM"
-          end="3:00 PM"
-          bgColor={dayOfWeek === 1 ? bgColor : defaultColor}
-          extra="border-x-2 border-b-2 rounded-bl-lg"
-        />
-        <Day
-          day="Tuesday"
-          start="10:00 AM"
-          end="3:00 PM"
-          bgColor={dayOfWeek === 2 ? bgColor : defaultColor}
-          extra="border-r-2 border-b-2"
-        />
-        <Day
-          day="Wednesday"
-          start="1:00 PM"
-          end="3:00 PM"
-          bgColor={dayOfWeek === 3 ? bgColor : defaultColor}
-          extra="border-r-2 border-b-2"
-        />
-        <Day
-          day="Thursday"
-          start="10:00 AM"
-          end="3:00 PM"
-          bgColor={dayOfWeek === 4 ? bgColor : defaultColor}
-          extra="border-r-2 border-b-2"
-        />
-        <Day
-          day="Friday"
-          start="1:00 PM"
-          end="3:00 PM"
-          bgColor={dayOfWeek === 5 ? bgColor : defaultColor}
-          extra="border-r-2 border-b-2 rounded-br-lg"
-        />
-      </section>{" "}
+    <>
+      <div className="flex min-h-screen w-screen flex-col items-center justify-center">
+        <Background />
+        <header className="w-3/5 min-w-[350px] md:min-w-[600px]">
+          {/* <CurrentDate /> */}
+          {/* <CurrentWeather /> */}
+          <Header />
+        </header>
+        <section className="flex w-3/5 min-w-[350px] flex-row items-center justify-center md:min-w-[600px]">
+          <Day
+            day="Monday"
+            start="1:00 PM"
+            end="3:00 PM"
+            bgColor={dayOfWeek === 1 ? bgColor : defaultColor}
+            extra="border-x-2 border-b-2 rounded-bl-lg"
+          />
+          <Day
+            day="Tuesday"
+            start="10:00 AM"
+            end="3:00 PM"
+            bgColor={dayOfWeek === 2 ? bgColor : defaultColor}
+            extra="border-r-2 border-b-2"
+          />
+          <Day
+            day="Wednesday"
+            start="1:00 PM"
+            end="3:00 PM"
+            bgColor={dayOfWeek === 3 ? bgColor : defaultColor}
+            extra="border-r-2 border-b-2"
+          />
+          <Day
+            day="Thursday"
+            start="10:00 AM"
+            end="3:00 PM"
+            bgColor={dayOfWeek === 4 ? bgColor : defaultColor}
+            extra="border-r-2 border-b-2"
+          />
+          <Day
+            day="Friday"
+            start="1:00 PM"
+            end="3:00 PM"
+            bgColor={dayOfWeek === 5 ? bgColor : defaultColor}
+            extra="border-r-2 border-b-2 rounded-br-lg"
+          />
+        </section>{" "}
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
 

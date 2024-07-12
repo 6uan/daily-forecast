@@ -47,7 +47,7 @@ const Header = () => {
         <div className="flex w-auto flex-col text-black">
           {/* Current Date */}
           <div className="flex flex-col items-end justify-start">
-            <p className="text-3xl md:text-4xl font-extrabold text-green-900">
+            <p className="text-3xl font-extrabold text-green-900 md:text-4xl">
               {currDate}{" "}
             </p>
             <p className="text-2xl text-black">{minDate} </p>
@@ -67,7 +67,7 @@ const Header = () => {
             </div>
           </div>
           {/* FORECAST of LOCATION */}
-          <div className="text-md max-w-[290px] text-black">
+          <div className="text-md max-w-[290px] text-center text-black">
             {JSON.stringify(forecast.shortForecast).replace(/"/g, "")}
           </div>
         </div>
