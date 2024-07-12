@@ -73,7 +73,7 @@ function App() {
           />
         </section>{" "}
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="fixed bottom-0 z-10 w-full">
         <Footer />
       </div>
     </>
