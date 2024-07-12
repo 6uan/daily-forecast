@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <div className="flex min-h-screen w-screen flex-col items-center justify-center">
+      <div className="flex min-h-dvh w-screen flex-col items-center justify-center md:min-h-screen">
         <Background />
         <header className="w-3/5 min-w-[350px] md:min-w-[600px]">
           {/* <CurrentDate /> */}

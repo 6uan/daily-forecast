@@ -717,8 +717,16 @@ video {
   height: 42.5px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-dvh {
+  min-height: 100dvh;
 }
 
 .w-3\/5 {
@@ -1180,6 +1188,10 @@ h1 {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:min-h-screen {
+    min-height: 100vh;
   }
 
   .md\:min-w-\[600px\] {
