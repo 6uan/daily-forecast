@@ -25,7 +25,7 @@ const Header = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const response = await axiosInstance.get(`/forecast/hourly`);
+        const response = await axiosInstance.get(`/forecast`);
         setWeatherData(response.data);
         setLoading(false);
       } catch (err) {
@@ -33,11 +33,9 @@ const Header = () => {
         setLoading(false);
       }
     };
-
     fetchWeather();
+    console.log(JSON.stringify(weatherData, null, 2));
   }, []);
-
-  console.log(JSON.stringify(weatherData, null, 2));
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
@@ -49,7 +47,7 @@ const Header = () => {
         <div className="flex w-auto flex-col text-black">
           {/* Current Date */}
           <div className="flex flex-col items-end justify-start">
-            <p className="text-4xl font-extrabold text-green-900">
+            <p className="text-3xl md:text-4xl font-extrabold text-green-900">
               {currDate}{" "}
             </p>
             <p className="text-2xl text-black">{minDate} </p>
@@ -61,15 +59,15 @@ const Header = () => {
               {JSON.stringify(forecast.temperature).replace(/"/g, "")}
             </div>
             {/* ICON IMG */}
-            <div className="justify-centere flex flex-1 items-center">
+            <div className="flex flex-1 items-center justify-center">
               <img
                 className="size-auto object-contain p-5"
-                src="https://basmilius.github.io/weather-icons/production/line/all/rain.svg"
+                src="https://basmilius.github.io/weather-icons/production/line/all/cloudy.svg"
               />
             </div>
           </div>
           {/* FORECAST of LOCATION */}
-          <div className="text-md text-black">
+          <div className="text-md max-w-[290px] text-black">
             {JSON.stringify(forecast.shortForecast).replace(/"/g, "")}
           </div>
         </div>

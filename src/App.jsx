@@ -1,8 +1,8 @@
 import React from "react";
 import Day from "./components/Day";
-import CurrentDate from "./components/CurrentDate";
 import "./output.css";
-import CurrentWeather from "./components/CurrentWeather";
+// import CurrentDate from "./components/CurrentDate";
+// import CurrentWeather from "./components/CurrentWeather";
 import Header from "./components/Header";
 import Background from "./components/Background";
 import Footer from "./components/Footer";
@@ -29,12 +29,12 @@ function App() {
   return (
     <div className="flex h-screen w-screen flex-col items-center justify-center">
       <Background />
-      <header className="w-3/5 min-w-[600px]">
+      <header className="w-3/5 min-w-[350px] md:min-w-[600px]">
         {/* <CurrentDate /> */}
         {/* <CurrentWeather /> */}
         <Header />
       </header>
-      <section className="flex w-3/5 min-w-[600px] flex-row items-center justify-center">
+      <section className="flex w-3/5 min-w-[350px] flex-row items-center justify-center md:min-w-[600px]">
         <Day
           day="Monday"
           start="1:00 PM"
