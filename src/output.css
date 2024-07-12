@@ -598,6 +598,18 @@ video {
   margin-top: 0.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .box-content {
   box-sizing: content-box;
 }
@@ -880,12 +892,25 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-5 {
   --tw-bg-opacity: 0.05;
 }
 
 .bg-wind {
   background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXdkNWlkdmlncnhlYzFxZW00dnJybzVuYXkxbm9wNHV2YW5kdDJkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jU11FhE6Bkn9CRYq4u/giphy.webp);
+}
+
+.bg-rain {
+  background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW5ic2JjbjN2ZnAydWV4b3FxemVlaTRxbzdpZzkycWN5MHZvcDM3aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VdKEHcPsjrlQv9Cv5n/giphy.webp);
+}
+
+.bg-dog {
+  background-image: url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3puZjd4Ymxsam53ZGE5NzY4NDVxZzU1b2ZyeXBuNmt1dXp5eW93MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WNzUV6hvktgoU/giphy.webp);
 }
 
 .bg-cover {
@@ -917,6 +942,18 @@ video {
   padding: 1.25rem;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -936,6 +973,14 @@ video {
 
 .pt-40 {
   padding-top: 10rem;
+}
+
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-center {

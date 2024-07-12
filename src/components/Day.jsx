@@ -1,6 +1,10 @@
 import mergeClassNames from "../utils/mergeClass.js";
+import useDayColor from "../hooks/useDayColor.js";
 
-const Day = ({ day, start, end, bgColor, extra }) => {
+const Day = ({ day, start, end, dayOfWeek, extra }) => {
+  const bgColor = useDayColor();
+  const defaultColor = "bg-white";
+  
   const dayAbbreviations = {
     Monday: "Mon",
     Tuesday: "Tue",
@@ -15,9 +19,24 @@ const Day = ({ day, start, end, bgColor, extra }) => {
     return time.replace(":00 ", "");
   };
 
+  const isToday = (day) => {
+    const dayMap = {
+      Sunday: 0,
+      Monday: 1,
+      Tuesday: 2,
+      Wednesday: 3,
+      Thursday: 4,
+      Friday: 5,
+      Saturday: 6,
+    };
+    return dayMap[day] === dayOfWeek;
+  };
+
   const baseClass =
     "grid h-40 flex-1 place-content-center text-xs text-black hover:bg-gray-800 hover:text-white";
-  const mergedClassNames = mergeClassNames(baseClass, bgColor, extra);
+
+  const computedBgColor = isToday(day) ? bgColor : defaultColor;
+  const mergedClassNames = mergeClassNames(baseClass, computedBgColor, extra);
   return (
     <div className={mergedClassNames}>
       {/* DAY abbreviate on small screen */}

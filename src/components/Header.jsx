@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { axiosInstance, weatherUrl, weatherKey } from "../utils/axiosInstance";
 import date from "date-and-time";
+import WeatherIcon from "./WeatherIcon";
 
 const Header = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -42,7 +43,7 @@ const Header = () => {
   const forecast = weatherData.properties.periods[0];
 
   return (
-    <div className="rounded-t-lg border-2 bg-white p-10">
+    <div className="rounded-t-lg border-2 bg-white p-8">
       <div className="flex flex-row justify-center space-x-8 align-middle">
         <div className="flex w-auto flex-col text-black">
           {/* Current Date */}
@@ -53,18 +54,13 @@ const Header = () => {
             <p className="text-2xl text-black">{minDate} </p>
           </div>
           {/* CONTAINER FOR TEMP AND ICON */}
-          <div className="flex h-28 flex-row items-center justify-center">
+          <div className="mb-4 flex h-28 flex-row items-center justify-center">
             {/* TEMP VAL */}
             <div className="degree-symbol ml-5 text-7xl font-bold">
               {JSON.stringify(forecast.temperature).replace(/"/g, "")}
             </div>
             {/* ICON IMG */}
-            <div className="flex flex-1 items-center justify-center">
-              <img
-                className="size-auto object-contain p-5"
-                src="https://basmilius.github.io/weather-icons/production/line/all/cloudy.svg"
-              />
-            </div>
+            <WeatherIcon weather={forecast.shortForecast} />
           </div>
           {/* FORECAST of LOCATION */}
           <div className="text-md max-w-[290px] text-center text-black">
