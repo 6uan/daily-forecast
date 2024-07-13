@@ -3,6 +3,9 @@ import React from "react";
 const getIconFilename = (weather) => {
   const lowerCaseWeather = weather.toLowerCase();
 
+  const now = new Date();
+  const isNight = now.getHours() >= 19;
+
   // Showers And Thunderstorms Likely
   if (
     lowerCaseWeather.includes("thunderstorm") &&
@@ -19,7 +22,7 @@ const getIconFilename = (weather) => {
     lowerCaseWeather.includes("cloudy") ||
     lowerCaseWeather.includes("overcast")
   )
-    return "overcast-day";
+    return isNight ? "overcast-night" : "overcast-day";
   // Untested
   if (lowerCaseWeather.includes("clear")) return "clear-day";
   // Untested
