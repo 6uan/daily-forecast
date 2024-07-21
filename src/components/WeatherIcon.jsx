@@ -1,4 +1,5 @@
 import React from "react";
+import useFavicon from "../hooks/useFavicon";
 
 const getIconFilename = (weather) => {
   const lowerCaseWeather = weather.toLowerCase();
@@ -37,6 +38,7 @@ const getIconFilename = (weather) => {
 
 const WeatherIcon = ({ weather }) => {
   const iconFilename = getIconFilename(weather);
+  useFavicon(iconFilename);
   console.log(iconFilename);
   return (
     <div className="flex flex-1 items-center justify-center">
