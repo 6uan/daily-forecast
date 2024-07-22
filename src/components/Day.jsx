@@ -1,10 +1,11 @@
 import mergeClassNames from "../utils/mergeClass.js";
 import useDayColor from "../hooks/useDayColor.js";
+import { Link } from "react-router-dom";
 
 const Day = ({ day, start, end, dayOfWeek, extra }) => {
   const bgColor = useDayColor();
   const defaultColor = "bg-white";
-  
+
   const dayAbbreviations = {
     Monday: "Mon",
     Tuesday: "Tue",
@@ -40,10 +41,15 @@ const Day = ({ day, start, end, dayOfWeek, extra }) => {
   return (
     <div className={mergedClassNames}>
       {/* DAY abbreviate on small screen */}
-      <span className="hidden text-center text-2xl md:inline">{day}</span>
-      <span className="inline text-center text-2xl md:hidden">
-        {dayAbbreviations[day]}
-      </span>
+      <Link to={`/day/${day.toLowerCase()}`} className="hidden md:inline">
+        <span className="text-center text-2xl hover:font-semibold">{day}</span>
+      </Link>
+      <Link to={`/day/${day.toLowerCase()}`} className="inline md:hidden">
+        <span className="text-center text-2xl hover:font-semibold">
+          {dayAbbreviations[day]}
+        </span>
+      </Link>
+
       {/*  TIME abbreviate on small screen */}
       <span className="hidden text-center text-sm md:inline">
         {start} <br /> to <br /> {end}
